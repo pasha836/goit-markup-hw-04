@@ -110,8 +110,22 @@ body {
 .current {
   color: var(--accent-color);
 }
+.current::after{
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 4px;
+  top: -554px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  text-align:center;
+}
 .menu-link:hover,
 :focus {
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
   color: var(--accent-color);
 }
 .header-contacts {
@@ -132,14 +146,27 @@ body {
   margin-right: 50px;
 }
 .contact-link {
+  display: inline-flex;
   color: var(--main-color);
+  fill: var(--main-color);
+}
+.contact-icon{
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+
 }
 .menu-link:hover,
 .menu-link:active,
 .menu-link:focus,
 .contact-link:hover,
 .contact-link:focus {
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .hero-block {
   max-width: 1600px;
@@ -247,6 +274,10 @@ h2 {
 }
 .we-doing-item h3:hover,
 .we-doing-item h3:focus {
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
   color: var(--accent-color);
 }
 .section-we-doing img {
@@ -358,6 +389,10 @@ h2 {
 
 .our-team-social-item:hover,
 .our-team-social-item:focus {
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
   background: var(--accent-color);
   border-radius: 22px;
 }
@@ -448,6 +483,10 @@ h2 {
 }
 .footer-adress-link a:hover,
 .footer-adress-link a:hover {
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
   color: var(--accent-color);
 }
 .footer-join {
@@ -489,6 +528,10 @@ h2 {
 }
 .footer-soc-item:hover,
 .footer-soc-item:focus {
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
   background: var(--accent-color);
   border-radius: 22px;
 }
@@ -592,6 +635,10 @@ h2 {
 }
 .btn-portfolio button:hover,
 .btn-portfolio button:focus {
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
   color: var(--white-color);
   background: var(--accent-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
