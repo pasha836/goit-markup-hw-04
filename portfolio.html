@@ -4,14 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфолио</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -35,13 +29,17 @@
           <ul class="contact-list list">
             <li class="header-contacts-item">
               <a href="mailto:info@devstudio.com" class="link contact-link">
-                <img src="./images/e-mail-hover.svg" alt="post-logo" />
+                <svg class="contact-icon">
+                  <use href="./images/symbol-defs.svg#icon-mail"></use>
+                </svg>
                 info@devstudio.com
               </a>
             </li>
             <li class="header-contacts-item">
               <a href="tel:+380961111111" class="link contact-link">
-                <img src="./images/smartphone-logo.svg" alt="smartphone-logo" />
+                <svg class="contact-icon">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
                 +38 096 111 111
               </a>
             </li>
@@ -69,70 +67,49 @@
           <ul class="portfolio-galery-list list">
             <li class="portfolio-galery-item">
               <a href="">
-                <img
-                  src="./images/porfolio/portfolio-img1.jpg"
-                  alt="Технокряк"
-                />
+                <img src="./images/porfolio/portfolio-img1.jpg" alt="Технокряк" />
                 <h2>Технокряк</h2>
                 <p>Веб-сайт</p>
               </a>
             </li>
             <li class="portfolio-galery-item">
               <a href="">
-                <img
-                  src="./images/porfolio/portfolio-img2.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                />
+                <img src="./images/porfolio/portfolio-img2.jpg" alt="Постер New Orlean vs Golden Star" />
                 <h2>Постер New Orlean vs Golden Star</h2>
                 <p>Дизайн</p>
               </a>
             </li>
             <li class="portfolio-galery-item">
               <a href="">
-                <img
-                  src="./images/porfolio/portfolio-img3.jpg"
-                  alt="Ресторан Seafood"
-                />
+                <img src="./images/porfolio/portfolio-img3.jpg" alt="Ресторан Seafood" />
                 <h2>Ресторан Seafood</h2>
                 <p>Приложение</p>
               </a>
             </li>
             <li class="portfolio-galery-item">
               <a href="">
-                <img
-                  src="./images/porfolio/portfolio-img4.jpg"
-                  alt="Проект Prime"
-                />
+                <img src="./images/porfolio/portfolio-img4.jpg" alt="Проект Prime" />
                 <h2>Проект Prime</h2>
                 <p>Маркетинг</p>
               </a>
             </li>
             <li class="portfolio-galery-item">
               <a href="">
-                <img
-                  src="./images/porfolio/portfolio-img5.jpg"
-                  alt="Проект Boxes"
-                />
+                <img src="./images/porfolio/portfolio-img5.jpg" alt="Проект Boxes" />
                 <h2>Проект Boxes</h2>
                 <p>Приложение</p>
               </a>
             </li>
             <li class="portfolio-galery-item">
               <a href="">
-                <img
-                  src="./images/porfolio/portfolio-img6.jpg"
-                  alt="Inspiration has no Borders"
-                />
+                <img src="./images/porfolio/portfolio-img6.jpg" alt="Inspiration has no Borders" />
                 <h2>Inspiration has no Borders</h2>
                 <p>Веб-сайт</p>
               </a>
             </li>
             <li class="portfolio-galery-item">
               <a href="">
-                <img
-                  src="./images/porfolio/portfolio-img7.jpg"
-                  alt="Издание Limited Edition"
-                />
+                <img src="./images/porfolio/portfolio-img7.jpg" alt="Издание Limited Edition" />
                 <h2>Издание Limited Edition</h2>
                 <p>Дизайн</p>
               </a>
@@ -159,24 +136,19 @@
     <footer class="page-footer">
       <div class="container block-footer">
         <div class="footer-contacts">
-          <a href="./index.html" class="footer-logo"
-            ><span>Web </span> Studio</a
-          >
+          <a href="./index.html" class="footer-logo"><span>Web </span> Studio</a>
           <ul class="list footer-adress-list">
-            <li>
+            <li class="footer-adress-item">
               <address>
-                <a
-                  href="https://goo.gl/maps/oeuYJ6SbiT1VcakN6"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="https://goo.gl/maps/oeuYJ6SbiT1VcakN6" target="_blank" rel="noopener noreferrer"
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </address>
             </li>
-            <li>
+            <li class="footer-adress-item">
               <a href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
-            <li>
+            <li class="footer-adress-item">
               <a href="tel:+380961111111">+38 096 111 111</a>
             </li>
           </ul>
@@ -185,40 +157,28 @@
           <h4 class="footer-join-title">Присоединяйтесь</h4>
           <ul class="list footer-soc-list">
             <li class="footer-soc-item">
-              <a
-                href=""
-                aria-label="ссылка Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img src="./images/instagram-w.svg" alt="instagram-logo"
-              /></a>
+              <a href="" aria-label="ссылка Instagram" target="_blank" rel="noopener noreferrer"
+                ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="./images/symbol-defs.svg#icon-instagram"></use></svg
+              ></a>
             </li>
             <li class="footer-soc-item">
-              <a
-                href=""
-                aria-label="ссылка Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img src="./images/twitter-w.svg" alt="twitter-logo"
-              /></a>
+              <a href="" aria-label="ссылка Twitter" target="_blank" rel="noopener noreferrer"
+                ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="./images/symbol-defs.svg#icon-twitter"></use></svg
+              ></a>
             </li>
             <li class="footer-soc-item">
-              <a
-                href=""
-                aria-label="ссылка Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img src="./images/facebook-w.svg" alt="facebook-logo"
-              /></a>
+              <a href="" aria-label="ссылка Facebook" target="_blank" rel="noopener noreferrer"
+                ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="./images/symbol-defs.svg#icon-facebook"></use></svg
+              ></a>
             </li>
             <li class="footer-soc-item">
-              <a
-                href=""
-                aria-label="ссылка linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img src="./images/linkedin-w.svg" alt="linkedin-logo"
-              /></a>
+              <a href="" aria-label="ссылка linkedin" target="_blank" rel="noopener noreferrer"
+                ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="./images/symbol-defs.svg#icon-linkedin"></use></svg
+              ></a>
             </li>
           </ul>
         </div>
@@ -228,19 +188,15 @@
               <h4 class="footer-join-title">Подпишитесь на рассылку</h4>
             </div>
             <div>
-              <input
-                type="email"
-                pattern="E-mail"
-                name="clien-email"
-                placeholder="E-mail"
-                id="malingbutton"
-              />
+              <input type="email" pattern="E-mail" name="clien-email" placeholder="E-mail" id="malingbutton" />
             </div>
           </div>
           <div class="footer-button-mailing">
             <button type="submit">
               Подписаться
-              <img src="./images/telegram-w.svg" alt="telegram-logo" />
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="./images/symbol-defs.svg#icon-send"></use>
+              </svg>
             </button>
           </div>
         </div>

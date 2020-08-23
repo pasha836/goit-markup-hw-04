@@ -58,7 +58,7 @@ body {
   width: 100%;
   height: 0px;
   left: 0px;
-  top: 81px;
+  top: 79px;
 
   border: 1px solid #ececec;
 }
@@ -85,7 +85,7 @@ body {
 .logo span {
   color: #2196f3;
 }
-.logo-mail{
+.logo-mail {
   width: 16px;
   height: 12px;
   color: #727272;
@@ -95,6 +95,7 @@ body {
   display: flex;
 }
 .menu-item:not(:last-child) {
+  position: relative;
   margin-right: 50px;
 }
 .menu-link {
@@ -106,27 +107,30 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--dark-color);
-}
-.current {
-  color: var(--accent-color);
-}
-.current::after{
-  content: '';
-  display: flex;
-  width: 100%;
-  height: 4px;
-  top: -554px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  text-align:center;
-}
-.menu-link:hover,
-:focus {
+
   transition-property: color, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
+}
+.current {
   color: var(--accent-color);
+}
+.current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -24px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  background-repeat: no-repeat;
+}
+.menu-link:hover,
+:focus {
+  color: var(--accent-color);
+  transition: color, transform;
 }
 .header-contacts {
   align-items: center;
@@ -149,22 +153,24 @@ body {
   display: inline-flex;
   color: var(--main-color);
   fill: var(--main-color);
+
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
-.contact-icon{
+.contact-icon {
   width: 16px;
   height: 16px;
   margin-right: 10px;
-
 }
 .menu-link:hover,
 .menu-link:active,
 .menu-link:focus,
 .contact-link:hover,
 .contact-link:focus {
-  transition-property: color, transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
+  transition: color, transform;
+
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -176,12 +182,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
-  background: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    ),
-    url(../images/hero.jpg);
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -261,7 +262,9 @@ h2 {
 .advantages-pictupes {
   background-color: #f5f4fa;
 }
-.our-advantages img {
+.our-advantages svg {
+  width: 70px;
+  height: 70px;
   margin: 25px 100px;
 }
 .our-advantages-item {
@@ -343,8 +346,7 @@ h2 {
   background-color: var(--white-color);
   margin-right: 30px;
   background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .our-team-item:last-child {
@@ -375,26 +377,41 @@ h2 {
 }
 .our-team-social-item {
   margin-right: 10px;
+  background: var(--white-color);
+  border-radius: 50%;
+  fill: #afb1b8;
+  transition-property: fill, background-color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .our-team-social-item:last-child {
   margin-right: 0;
 }
 .our-team-social-item > a {
+  width: 20px;
+  height: 20px;
   display: flex;
-  position: relative;
   margin: 12px;
   line-height: 0;
   letter-spacing: 0;
 }
+.our-team-social-item > a > svg {
+  fill: #afb1b8;
 
-.our-team-social-item:hover,
-.our-team-social-item:focus {
-  transition-property: color, transform;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
+}
+.our-team-social-item:hover,
+.our-team-social-item:focus {
   background: var(--accent-color);
-  border-radius: 22px;
+  fill: #ffffff;
+}
+.our-team-social-item:hover > a > svg,
+.our-team-social-item:focus > a > svg {
+  fill: #ffffff;
 }
 /*Блок "Постоянные клиенты"*/
 
@@ -413,6 +430,11 @@ h2 {
   margin-right: 30px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  fill: #afb1b8;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .regular-customers-item:last-child {
   margin-right: 0;
@@ -424,8 +446,23 @@ h2 {
 
 .regular-customers-item > a {
   display: flex;
-  margin: 24px 65px;
+  width: 89px;
+  height: 48px;
+  margin-top: 22px;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
+}
+.regular-customers-item > a > svg {
+  fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+.regular-customers-item:hover > a > svg,
+.regular-customers-item:focus > a > svg {
+  fill: #2196f3;
 }
 
 /*Footer*/
@@ -459,10 +496,7 @@ h2 {
 .footer-logo span {
   color: #2196f3;
 }
-/*.footer-logo:hover,
-.footer-logo:focus {
-  color: var(--accent-color);
-}*/
+
 .footer-adress-list {
   display: flex;
   flex-direction: column;
@@ -477,16 +511,17 @@ h2 {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
-}
-.footer-adress-list > li > address > a {
-  color: var(--white-color);
-}
-.footer-adress-link a:hover,
-.footer-adress-link a:hover {
+
   transition-property: color, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
+}
+.footer-adress-item > address > a {
+  color: var(--white-color);
+}
+.footer-adress-item a:hover,
+.footer-adress-item a:hover {
   color: var(--accent-color);
 }
 .footer-join {
@@ -511,29 +546,32 @@ h2 {
   margin-top: 20px;
 }
 .footer-soc-item > a {
+  width: 20px;
+  height: 20px;
   display: flex;
   position: relative;
   margin: 12px;
   line-height: 0;
   letter-spacing: 0;
+  fill: #ffffff;
 }
 .footer-soc-item {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   /*background-size: 44px;*/
-  border-radius: 22px;
+  border-radius: 50%;
   margin-right: 10px;
+
+  transition-property: background-color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .footer-soc-item:last-child {
   margin-right: 0;
 }
 .footer-soc-item:hover,
 .footer-soc-item:focus {
-  transition-property: color, transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
-  background: var(--accent-color);
-  border-radius: 22px;
+  background-color: var(--accent-color);
 }
 .footer-mailing {
   display: flex;
@@ -589,6 +627,12 @@ h2 {
   line-height: 1.88;
   text-align: center;
 }
+.footer-button-mailing > button > svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: #ffffff;
+}
 
 /*Portfolio*/
 
@@ -599,7 +643,7 @@ h2 {
   width: 100%;
   height: 0px;
   left: 0px;
-  top: 81px;
+  top: 80px;
   border: 1px solid #ececec;
 }
 .portfolio-main-navigation-list {
@@ -641,8 +685,7 @@ h2 {
   transition-delay: 0;
   color: var(--white-color);
   background: var(--accent-color);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 3px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 .portfolio-galery-list {
   display: flex;
@@ -666,8 +709,7 @@ h2 {
 .portfolio-galery-item:hover,
 .portfolio-galery-item:focus {
   border: 1px solid #eeeeee;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-galery-item > a {
   text-decoration: none;
